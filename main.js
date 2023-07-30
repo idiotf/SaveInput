@@ -9,7 +9,9 @@ setInterval(function() {
 			const interval = setInterval(function() {
 				if(!write.value) {
 					write.value = localStorage.getItem("saveInput");
-					clearInterval(interval);
+					addEventListener("keypress", function() {
+						clearInterval(interval);
+					});
 				}
 			});
 		});
