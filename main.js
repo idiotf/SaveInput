@@ -9,7 +9,7 @@ setInterval(function() {
 			const interval = setInterval(function() {
 				if(!write.value) {
 					write.value = localStorage.getItem("saveInput");
-					addEventListener("keypress", function() {
+					addEventListener("keydown", function() {
 						clearInterval(interval);
 					});
 				}
