@@ -1,7 +1,7 @@
 {
 	"name": "SaveInput",
 	"description": "글 쓸때 검열로 인한 글 초기화 방지",
-	"version": "1.0.0",
+	"version": "1.1",
 	"manifest_version": 3,
 	"content_scripts": [
 		{
