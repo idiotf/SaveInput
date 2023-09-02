@@ -17,11 +17,7 @@ setInterval(function() {
 	//	});
 	//	button.classList.add("event");
 	//});
-	chrome.tabs.executeScript({
-		code: `const allTextarea = document.querySelectorAll("#Write");
-			for(const textarea of allTextarea) {
-				textarea.__defineSetter__("value", function() {}); // 이 코드가 문제 되면 알림 부탁
-			}
-		`,
+	document.querySelectorAll("#Write").forEach(function(textarea) {
+		textarea.__defineSetter__("value", function() {}); // 이 코드가 문제 되면 알림 부탁
 	});
 });
