@@ -18,6 +18,6 @@ setInterval(function() {
 	//	button.classList.add("event");
 	//});
 	document.querySelectorAll("#Write").forEach(function(textarea) {
-		textarea.__defineSetter__("value", function() {}); // 이 코드가 문제 되면 알림 부탁
+		if(textarea.value) textarea.__defineSetter__("value", function() {}); // 이 코드가 문제 되면 알림 부탁
 	});
 });
