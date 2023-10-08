@@ -7,12 +7,10 @@ setInterval(function() {
 			const write = button.parentNode.parentNode.parentNode.querySelector("#Write");
 			localStorage.setItem("saveInput", write.value);
 			const interval = setInterval(function() {
-				if(!write.value) {
-					write.value = localStorage.getItem("saveInput");
-					write.addEventListener("input", function() {
-						clearInterval(interval);
-					});
-				}
+				if(!write.value) write.value = localStorage.getItem("saveInput");
+			});
+			write.addEventListener("input", function() {
+				clearInterval(interval);
 			});
 		});
 		button.classList.add("event");
